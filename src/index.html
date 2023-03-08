@@ -7,5 +7,121 @@
     <link href="/dist/output.css" rel="stylesheet" />
     <title>Form Login</title>
   </head>
-  <body></body>
+  <body class="bg-purple-200">
+    <main class="flex items-center justify-center">
+      <div class="bg-gray-200 m-6">
+        <form class="flex justify-center items-center mr-3 flex-col" action="">
+          <h1 class="label text-3xl mt-5 text-center">Skapa Konto</h1>
+          <div class="md:flex">
+            <section class="space-y-10 p-5 ml-3">
+              <div>
+                <label class="label" for="name"> Användarnamn</label>
+                <input
+                  class="input"
+                  id="user-name"
+                  autocomplete="on"
+                  type="text"
+                  placeholder="Minst 5 tecken"
+                  required
+                />
+              </div>
+              <div>
+                <label class="label" for="firstName"> Förnamn</label>
+                <input
+                  class="input"
+                  id="first-name"
+                  autocomplete="on"
+                  type="text"
+                  required
+                />
+              </div>
+              <div>
+                <label class="label" for="lastName"> Efternamn</label>
+                <input
+                  class="input"
+                  id="last-name"
+                  autocomplete="on"
+                  type="text"
+                  required
+                />
+              </div>
+              <div>
+                <label class="label" for="mail">E-postadress</label>
+                <input
+                  class="input"
+                  id="mail"
+                  autocomplete="on"
+                  type="email"
+                  required
+                />
+              </div>
+            </section>
+            <section class="space-y-10 p-5 ml-3">
+              <div>
+                <label class="label" for="confirmMail">
+                  Bekräfta e-postadress</label
+                >
+                <input
+                  class="input"
+                  id="confirm-mail"
+                  autocomplete="on"
+                  type="email"
+                  required
+                />
+              </div>
+              <div>
+                <label class="label" for="password"> Lösenord</label>
+                <input
+                  class="input"
+                  id="password"
+                  autocomplete="on"
+                  type="password"
+                  placeholder="********"
+                  type="submit"
+                  required
+                />
+              </div>
+              <div>
+                <label class="label" for="confirmPassword">
+                  Bekräfta lösenord</label
+                >
+                <input
+                  class="input"
+                  id="confirm-password"
+                  autocomplete="on"
+                  type="password"
+                  placeholder="********"
+                  required
+                />
+              </div>
+
+              <div>
+                <label class="label" for="telefon"> Mobilnummer</label>
+                <input
+                  class="input"
+                  id="telefon"
+                  autocomplete="on"
+                  type="tel"
+                  placeholder="+46"
+                  required
+                />
+              </div>
+            </section>
+          </div>
+          <section class="flex items-center justify-center">
+            <div class="mb-6 mt-3">
+              <button
+                id="submit-btn"
+                class="bg-green-300 w-36 h-10 rounded-xl p-2 font-light shadow-xl md:my-7"
+                type="submit"
+              >
+                <a id="btn-tag">Skapa Konto</a>
+              </button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </main>
+    <script src="/src/index.js"></script>
+  </body>
 </html>
