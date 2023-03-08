@@ -1,0 +1,25 @@
+{
+  "name": "formlogin",
+  "version": "1.0.0",
+  "description": "Form Login",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rasmus3liasson/formLogin.git"
+  },
+  "author": "Rasmus Eliasson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rasmus3liasson/formLogin/issues"
+  },
+  "homepage": "https://github.com/Rasmus3liasson/formLogin#readme",
+  "dependencies": {
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
