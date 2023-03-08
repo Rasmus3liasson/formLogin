@@ -7,9 +7,12 @@
     @apply flex items-center justify-center text-xl mb-2 font-light lg:text-2xl;
   }
   .input {
-    @apply rounded-3xl px-3 py-0.5 shadow-lg lg:w-80 lg:h-9;
+    @apply rounded-3xl px-3 py-0.5 shadow-lg lg:w-80 lg:h-9 italic;
   }
   .input-error {
     @apply border-2 border-red-400;
+  }
+  .eye-icon {
+    @apply w-6 h-auto absolute left-44 bottom-0.5 lg:left-72 lg:bottom-1;
   }
 }

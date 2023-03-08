@@ -32,6 +32,7 @@
                   id="first-name"
                   autocomplete="on"
                   type="text"
+                  placeholder="ex: Rasmus"
                   required
                 />
               </div>
@@ -42,6 +43,7 @@
                   id="last-name"
                   autocomplete="on"
                   type="text"
+                  placeholder="ex: Eliasson"
                   required
                 />
               </div>
@@ -52,6 +54,7 @@
                   id="mail"
                   autocomplete="on"
                   type="email"
+                  placeholder="ex: peter@hotmail.com"
                   required
                 />
               </div>
@@ -66,33 +69,51 @@
                   id="confirm-mail"
                   autocomplete="on"
                   type="email"
+                  placeholder="ex:peter@hotmail.com"
                   required
                 />
               </div>
               <div>
                 <label class="label" for="password"> Lösenord</label>
-                <input
-                  class="input"
-                  id="password"
-                  autocomplete="on"
-                  type="password"
-                  placeholder="********"
-                  type="submit"
-                  required
-                />
+                <div class="relative">
+                  <input
+                    class="input"
+                    id="password"
+                    autocomplete="on"
+                    type="password"
+                    placeholder="ex: Solen123!"
+                    type="submit"
+                    required
+                  />
+                  <img
+                    class="eye-icon"
+                    id="eye-icon"
+                    src="/dist/img/eye.png"
+                    alt="eye to show and hide password"
+                  />
+                </div>
               </div>
               <div>
                 <label class="label" for="confirmPassword">
                   Bekräfta lösenord</label
                 >
-                <input
-                  class="input"
-                  id="confirm-password"
-                  autocomplete="on"
-                  type="password"
-                  placeholder="********"
-                  required
-                />
+                <div class="relative">
+                  <input
+                    class="input"
+                    id="confirm-password"
+                    autocomplete="on"
+                    type="password"
+                    placeholder="ex: Solen123!"
+                    type="submit"
+                    required
+                  />
+                  <img
+                    class="eye-icon"
+                    id="eye-icon-confirm"
+                    src="/dist/img/eye.png"
+                    alt="eye to show and hide password"
+                  />
+                </div>
               </div>
 
               <div>
@@ -102,7 +123,7 @@
                   id="telefon"
                   autocomplete="on"
                   type="tel"
-                  placeholder="+46"
+                  placeholder="+46707308579"
                   required
                 />
               </div>
