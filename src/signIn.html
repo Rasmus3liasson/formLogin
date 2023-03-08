@@ -10,7 +10,7 @@
   <body>
     <body class="bg-purple-200">
       <main class="flex items-center justify-center">
-        <div class="bg-gray-200 m-6">
+        <div class="bg-gray-200 m-9 mt-44">
           <form
             class="flex justify-center items-center mr-3 flex-col"
             action=""
@@ -30,14 +30,24 @@
                   />
                 </div>
                 <div>
-                  <label class="label" for="firstName"> Lösenord</label>
-                  <input
-                    class="input"
-                    id="first-name"
-                    autocomplete="on"
-                    type="text"
-                    required
-                  />
+                  <label class="label" for="password"> Lösenord</label>
+                  <div class="relative">
+                    <input
+                      class="input"
+                      id="password"
+                      autocomplete="on"
+                      type="password"
+                      placeholder="ex: Solen123!"
+                      type="submit"
+                      required
+                    />
+                    <img
+                      class="eye-icon"
+                      id="eye-icon"
+                      src="/dist/img/eye.png"
+                      alt="eye to show and hide password"
+                    />
+                  </div>
                 </div>
               </section>
             </div>
@@ -46,14 +56,14 @@
                 class="mb-6 mt-3 space-y-5 flex flex-col lg:flex-row lg:space-y-0 lg:gap-8 lg:items-center"
               >
                 <button
-                  id="submit-btn"
+                  id="log-in-btn"
                   class="bg-green-300 w-36 h-10 rounded-xl p-2 font-light shadow-xl md:my-7"
                   type="submit"
                 >
                   <a id="btn-tag" href="#">Logga in</a>
                 </button>
                 <button
-                  id="submit-btn"
+                  id="create-account-btn"
                   class="bg-green-300 w-36 h-10 rounded-xl p-2 font-light shadow-xl md:my-7"
                   type="submit"
                 >
@@ -64,7 +74,7 @@
           </form>
         </div>
       </main>
-      <script src="/src/index.js"></script>
+      <script src="/src/signIn.js" type="module"></script>
     </body>
   </body>
 </html>

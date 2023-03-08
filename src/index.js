@@ -4,28 +4,30 @@ const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const mail = document.querySelector("#mail");
 const mailConfirm = document.querySelector("#confirm-mail");
-const password = document.querySelector("#password");
-const passwordConfirm = document.querySelector("#confirm-password");
+
 const telefon = document.querySelector("#telefon");
 const btnTag = document.querySelector("#btn-tag");
+const subBtn = document.querySelector("#submit-btn");
 
-const eyeIcon = document
-  .querySelector("#eye-icon")
-  .addEventListener("click", function () {
+function eyeIcon() {
+  document.querySelector("#eye-icon").addEventListener("click", function () {
+    const password = document.querySelector("#password");
     if (password.getAttribute("type", "password")) {
       password.setAttribute("type", "text");
     }
   });
+}
 
-const eyeIconConfirm = document
-  .querySelector("#eye-icon-confirm")
-  .addEventListener("click", function () {
-    if (passwordConfirm.getAttribute("type", "password")) {
-      passwordConfirm.setAttribute("type", "text");
-    }
-  });
-
-let subBtn = document.querySelector("#submit-btn");
+function eyeIconConfirm() {
+  document
+    .querySelector("#eye-icon-confirm")
+    .addEventListener("click", function () {
+      const passwordConfirm = document.querySelector("#confirm-password");
+      if (passwordConfirm.getAttribute("type", "password")) {
+        passwordConfirm.setAttribute("type", "text");
+      }
+    });
+}
 
 function checkPassword() {
   if (
@@ -70,6 +72,9 @@ function errorIndicator() {
   errorBorder(passwordConfirm);
   errorBorder(telefon);
 }
+
+eyeIcon();
+eyeIconConfirm();
 
 subBtn.addEventListener("click", function () {
   errorIndicator();
