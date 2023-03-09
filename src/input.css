@@ -13,6 +13,6 @@
     @apply border-2 border-red-400;
   }
   .eye-icon {
-    @apply w-6 h-auto absolute left-44 bottom-0.5 lg:left-72 lg:bottom-1;
+    @apply w-6 h-auto absolute left-40 bottom-1 lg:left-72 lg:bottom-1;
   }
 }

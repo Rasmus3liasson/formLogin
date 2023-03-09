@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
     <link href="/dist/output.css" rel="stylesheet" />
     <title>Form Login</title>
   </head>
   <body class="bg-purple-200">
-    <main class="flex items-center justify-center">
+    <main class="flex items-center justify-center font-montserrat">
       <div class="bg-gray-200 m-9 md:mt-24">
-        <form class="flex justify-center items-center mr-3 flex-col" action="">
+        <form class="flex justify-center items-center flex-col" action="">
           <h1 class="label text-3xl mt-5 text-center">Skapa Konto</h1>
-          <div class="md:flex">
-            <section class="space-y-10 p-5 ml-3">
+          <div class="md:flex justify-center items-center">
+            <section class="space-y-10 p-5 ml-3 flex flex-col items-center">
               <div>
                 <label class="label" for="name"> Användarnamn</label>
                 <input
@@ -54,22 +58,22 @@
                   id="mail"
                   autocomplete="on"
                   type="email"
-                  placeholder="ex: peter@hotmail.com"
+                  placeholder="ex: peter@gmail.com"
                   required
                 />
               </div>
             </section>
-            <section class="space-y-10 p-5 ml-3">
+            <section class="space-y-10 p-5 ml-3 flex flex-col items-center">
               <div>
                 <label class="label" for="confirmMail">
                   Bekräfta e-postadress</label
                 >
                 <input
-                  class="input"
+                  class="input ml-3"
                   id="confirm-mail"
                   autocomplete="on"
                   type="email"
-                  placeholder="ex:peter@hotmail.com"
+                  placeholder="ex:peter@gmail.com"
                   required
                 />
               </div>
