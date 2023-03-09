@@ -62,6 +62,16 @@ function checkEmail() {
     mailConfirm.classList.add("input-error");
   }
 }
+function checkPhone() {
+  const phonePattern = /^07(0|2|3|6|9)\d{7}$/g;
+
+  if (telefon.value.match(phonePattern)) {
+    console.log(telefon.value.length);
+    return true;
+  } else {
+    telefon.classList.add("input-error");
+  }
+}
 
 function errorBorder(inputValue) {
   if (inputValue.value === "") {
@@ -89,4 +99,5 @@ export {
   checkPassword,
   errorIndicator,
   checkUserName,
+  checkPhone,
 };
