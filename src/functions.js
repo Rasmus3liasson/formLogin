@@ -4,14 +4,16 @@ const lastName = document.querySelector("#last-name");
 const mail = document.querySelector("#mail");
 const mailConfirm = document.querySelector("#confirm-mail");
 const telefon = document.querySelector("#telefon");
+const password = document.querySelector("#password");
 const passwordConfirm = document.querySelector("#confirm-password");
 
 function checkUserName() {
   if (userName.value.length >= 5) {
     userName.classList.remove("input-error");
-    return true;
+    return userName.value;
   } else {
     userName.classList.add("input-error");
+    return false;
   }
 }
 
@@ -38,7 +40,6 @@ function eyeIconConfirm() {
 }
 
 function checkPassword() {
-  const password = document.querySelector("#password");
   if (
     password.value.match(/[A-Z]+[a-z]+[0-9]+[$@#&!]/) &&
     password.value.length >= 8 &&
@@ -49,6 +50,10 @@ function checkPassword() {
     password.classList.add("input-error");
     passwordConfirm.classList.add("input-error");
   }
+}
+
+function accesPassword() {
+  return password.value;
 }
 
 function checkEmail() {
@@ -99,4 +104,5 @@ export {
   errorIndicator,
   checkUserName,
   checkPhone,
+  accesPassword,
 };
