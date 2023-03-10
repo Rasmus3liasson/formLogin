@@ -68,9 +68,11 @@ function checkEmail() {
   }
 }
 function checkPhone() {
-  const phonePattern = /^07(0|2|3|6|9)\d{7}$/g;
+  const phonePattern =
+    /^(0|\+46)\s*(7[02369])[\s-]*\d{3}[\s-]*\d{2}[\s-]*\d{2}$/;
 
   if (telefon.value.match(phonePattern)) {
+    telefon.classList.remove("input-error");
     return true;
   } else {
     telefon.classList.add("input-error");
