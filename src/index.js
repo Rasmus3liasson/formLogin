@@ -17,19 +17,19 @@ eyeIconConfirm();
 
 subBtn.addEventListener("click", function () {
   errorIndicator();
-  const userNameAccepted = checkUserName();
-  const passwordAccepted = accesPassword();
-
-  let loginObj = {
-    username: userNameAccepted,
-    password: passwordAccepted,
-  };
-
-  /*  let objStringify = JSON.stringify(loginObj);
-  sessionStorage.setItem("loginObj", objStringify); */
 
   if (checkEmail() && checkPassword() && checkPhone()) {
     event.preventDefault();
+    const userNameAccepted = checkUserName();
+    const passwordAccepted = accesPassword();
+
+    let loginObj = {
+      username: userNameAccepted,
+      password: passwordAccepted,
+    };
+
+    let objStringify = JSON.stringify(loginObj);
+    sessionStorage.setItem("loginObj", objStringify);
 
     btnTag.setAttribute("href", "signIn.html");
   } else {

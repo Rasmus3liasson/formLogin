@@ -6,17 +6,18 @@ const password = document.querySelector("#password");
 function accesSessionStorage() {
   const loginObj = JSON.parse(sessionStorage.getItem("loginObj"));
 
-  if (userName.value == loginObj.username) {
+  if (userName.value === loginObj.username) {
     userName.classList.remove("input-error");
     if (password.value === loginObj.password) {
       password.classList.remove("input-error");
-      console.log("KLARD");
-
+      document.querySelector("#sign-in-text").removeAttribute("hidden");
       return true;
     }
   } else {
+    console.error("Inget med dessa kontouppgifter har skapats, status 401");
     userName.classList.add("input-error");
     password.classList.add("input-error");
+
     return false;
   }
 }

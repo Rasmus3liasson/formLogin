@@ -103,6 +103,6 @@ export {
   checkPassword,
   errorIndicator,
   checkUserName,
-  checkPhone,
   accesPassword,
+  checkPhone,
 };
