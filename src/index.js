@@ -14,7 +14,6 @@ const subBtn = document.querySelector("#submit-btn");
 
 eyeIcon();
 eyeIconConfirm();
-checkPhone();
 
 subBtn.addEventListener("click", function () {
   errorIndicator();

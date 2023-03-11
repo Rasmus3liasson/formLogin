@@ -14,7 +14,7 @@ function accesSessionStorage() {
       return true;
     }
   } else {
-    console.error("Inget med dessa kontouppgifter har skapats status 401");
+    console.error("Inget med dessa kontouppgifter har skapats, status 401");
     userName.classList.add("input-error");
     password.classList.add("input-error");
 
