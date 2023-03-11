@@ -53,7 +53,7 @@ function checkEmail() {
 
 function checkPassword() {
   if (
-    password.value.match(/[A-Z]+[a-z]+[0-9]+[$@#&!]/) &&
+    password.value.match(/[A-Z]+[a-z]+[0-9]+[$@#&!?=%€]/) &&
     password.value.length >= 8 &&
     password.value === passwordConfirm.value
   ) {
