@@ -6,6 +6,7 @@ function accesSessionStorage() {
   const password = document.querySelector("#password");
 
   const loginObj = JSON.parse(sessionStorage.getItem("loginObj"));
+
   if (
     userName.value === loginObj.username &&
     password.value === loginObj.password
