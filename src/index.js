@@ -18,8 +18,12 @@ eyeIconConfirm();
 subBtn.addEventListener("click", function () {
   errorIndicator();
 
-  if (checkEmail() && checkPassword() && checkPhone()) {
-    event.preventDefault();
+  if (
+    checkEmail() &&
+    checkPassword() &&
+    checkPhone() === true &&
+    checkUserName() != false
+  ) {
     const userNameAccepted = checkUserName();
     const passwordAccepted = accesPassword();
 

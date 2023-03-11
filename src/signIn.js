@@ -5,14 +5,15 @@ const password = document.querySelector("#password");
 
 function accesSessionStorage() {
   const loginObj = JSON.parse(sessionStorage.getItem("loginObj"));
-
-  if (userName.value === loginObj.username) {
+  if (
+    userName.value === loginObj.username &&
+    password.value === loginObj.password
+  ) {
     userName.classList.remove("input-error");
-    if (password.value === loginObj.password) {
-      password.classList.remove("input-error");
-      document.querySelector("#sign-in-text").removeAttribute("hidden");
-      return true;
-    }
+    password.classList.remove("input-error");
+    document.querySelector("#sign-in-text").removeAttribute("hidden");
+
+    return true;
   } else {
     console.error("Inget med dessa kontouppgifter har skapats, status 401");
     userName.classList.add("input-error");

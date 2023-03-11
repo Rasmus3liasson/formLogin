@@ -68,7 +68,7 @@ function checkEmail() {
   }
 }
 function checkPhone() {
-  const phonePattern = /^07(0|2|3|6|9)\d{7}$/g;
+  const phonePattern = /^(?:\+46|0)(7[0236])[-]?(\d{3})[-]?(\d{2})[-]?(\d{2})$/;
 
   if (telefon.value.match(phonePattern)) {
     return true;
