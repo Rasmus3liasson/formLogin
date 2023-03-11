@@ -68,21 +68,11 @@ function accesPassword() {
   return password.value;
 }
 
-function checkEmail() {
-  const emailPattern =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-  if (mail.value.match(emailPattern) && mail.value === mailConfirm.value) {
-    return true;
-  } else {
-    mail.classList.add("input-error");
-    mailConfirm.classList.add("input-error");
-  }
-}
 function checkPhone() {
   const phonePattern = /^(?:\+46|0)(7[0236])[-]?(\d{3})[-]?(\d{2})[-]?(\d{2})$/;
 
   if (telefon.value.match(phonePattern)) {
+    telefon.classList.remove("input-error");
     return true;
   } else {
     telefon.classList.add("input-error");
