@@ -5,7 +5,9 @@ const mail = document.querySelector("#mail");
 const mailConfirm = document.querySelector("#confirm-mail");
 const telefon = document.querySelector("#telefon");
 const password = document.querySelector("#password");
+const passwordLabel = document.querySelector("#password-label");
 const passwordConfirm = document.querySelector("#confirm-password");
+const passwordConfirmLabel = document.querySelector("#password-confirm-label");
 
 function checkUserName() {
   if (userName.value.length >= 5) {
@@ -58,9 +60,15 @@ function checkPassword() {
     password.value === passwordConfirm.value
   ) {
     return true;
+  } else if (password.value != passwordConfirm.value) {
+    passwordConfirm.classList.add("input-error");
+    passwordConfirmLabel.innerHTML = "Stämmer inte";
+  } else if (password.value.match(/[A-Z]+[a-z]+[0-9]+[$@#&!?=%€]/)) {
+    passwordLabel.innerHTML = "Lösenord";
   } else {
     password.classList.add("input-error");
     passwordConfirm.classList.add("input-error");
+    passwordLabel.innerHTML = "Inte starkt nog";
   }
 }
 
