@@ -4,6 +4,7 @@ const logIn = document.querySelector("#log-in-btn");
 function accesSessionStorage() {
   const userName = document.querySelector("#user-name");
   const password = document.querySelector("#password");
+  const loginBtn = document.querySelector("#btn-tag");
 
   const loginObj = JSON.parse(sessionStorage.getItem("loginObj"));
 
@@ -14,6 +15,7 @@ function accesSessionStorage() {
     userName.classList.remove("input-error");
     password.classList.remove("input-error");
     document.querySelector("#sign-in-text").removeAttribute("hidden");
+    loginBtn.setAttribute("href", "#");
 
     return true;
   } else {

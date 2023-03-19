@@ -34,7 +34,7 @@ subBtn.addEventListener("click", function () {
 
     let objStringify = JSON.stringify(loginObj);
     sessionStorage.setItem("loginObj", objStringify);
-    btnTag.setAttribute("href", "signIn.html");
+    btnTag.setAttribute("href", "index.html");
   } else {
     event.preventDefault();
   }
