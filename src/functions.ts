@@ -1,13 +1,19 @@
-const userName = document.querySelector("#user-name");
-const firstName = document.querySelector("#first-name");
-const lastName = document.querySelector("#last-name");
-const mail = document.querySelector("#mail");
-const mailConfirm = document.querySelector("#confirm-mail");
-const telefon = document.querySelector("#telefon");
-const password = document.querySelector("#password");
-const passwordLabel = document.querySelector("#password-label");
-const passwordConfirm = document.querySelector("#confirm-password");
-const passwordConfirmLabel = document.querySelector("#password-confirm-label");
+const userName = document.querySelector("#user-name") as HTMLInputElement;
+const firstName = document.querySelector("#first-name") as HTMLInputElement;
+const lastName = document.querySelector("#last-name") as HTMLInputElement;
+const mail = document.querySelector("#mail") as HTMLInputElement;
+const mailConfirm = document.querySelector("#confirm-mail") as HTMLInputElement;
+const telefon = document.querySelector("#telefon") as HTMLInputElement;
+const password = document.querySelector("#password") as HTMLInputElement;
+const passwordLabel = document.querySelector(
+  "#password-label"
+) as HTMLInputElement;
+const passwordConfirm = document.querySelector(
+  "#confirm-password"
+) as HTMLInputElement;
+const passwordConfirmLabel = document.querySelector(
+  "#password-confirm-label"
+) as HTMLInputElement;
 
 function checkUserName() {
   if (userName.value.length >= 5) {
@@ -20,7 +26,9 @@ function checkUserName() {
 }
 
 function eyeIcon() {
-  document.querySelector("#eye-icon").addEventListener("click", function () {
+  const passwordIcon = document.querySelector("#eye-icon") as HTMLInputElement;
+
+  passwordIcon.addEventListener("click", function () {
     if (password.type === "password") {
       password.type = "text";
     } else {
@@ -30,15 +38,17 @@ function eyeIcon() {
 }
 
 function eyeIconConfirm() {
-  document
-    .querySelector("#eye-icon-confirm")
-    .addEventListener("click", function () {
-      if (passwordConfirm.type === "password") {
-        passwordConfirm.type = "text";
-      } else {
-        passwordConfirm.type = "password";
-      }
-    });
+  const passwordIcon = document.querySelector(
+    "#eye-icon-confirm"
+  ) as HTMLInputElement;
+
+  passwordIcon.addEventListener("click", function () {
+    if (passwordConfirm.type === "password") {
+      passwordConfirm.type = "text";
+    } else {
+      passwordConfirm.type = "password";
+    }
+  });
 }
 
 function checkEmail() {
@@ -88,7 +98,7 @@ function checkPhone() {
   }
 }
 
-function errorBorder(inputValue) {
+function errorBorder(inputValue: HTMLInputElement) {
   if (inputValue.value === "") {
     inputValue.classList.add("input-error");
   } else if (inputValue.value != "") {
@@ -104,7 +114,7 @@ function errorIndicator() {
   errorBorder(mailConfirm);
   errorBorder(password);
   errorBorder(passwordConfirm);
-  checkPhone(telefon.value);
+  checkPhone();
 }
 
 export {

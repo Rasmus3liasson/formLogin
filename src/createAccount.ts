@@ -9,8 +9,8 @@ import {
   accesPassword,
 } from "./functions.js";
 
-const btnTag = document.querySelector("#btn-tag");
-const subBtn = document.querySelector("#submit-btn");
+const btnTag = document.querySelector("#btn-tag") as HTMLLinkElement;
+const subBtn = document.querySelector("#submit-btn") as HTMLButtonElement;
 
 eyeIcon();
 eyeIconConfirm();
@@ -36,6 +36,6 @@ subBtn.addEventListener("click", function () {
     sessionStorage.setItem("loginObj", objStringify);
     btnTag.setAttribute("href", "index.html");
   } else {
-    event.preventDefault();
+    event?.preventDefault();
   }
 });
