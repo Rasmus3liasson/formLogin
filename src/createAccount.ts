@@ -32,10 +32,23 @@ subBtn.addEventListener("click", function () {
       password: passwordAccepted,
     };
 
-    let objStringify = JSON.stringify(loginObj);
+    fetch("/api/hej", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(loginObj),
+    });
+
+    /*   let objStringify = JSON.stringify(loginObj);
     sessionStorage.setItem("loginObj", objStringify);
     btnTag.setAttribute("href", "index.html");
   } else {
     event?.preventDefault();
+  } */
   }
 });
+
+/* fetch("/api/highscoredata", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(highscoreData),
+}); */
