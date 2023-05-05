@@ -1,19 +1,22 @@
 import express from "express";
 import mongoose from "mongoose";
 import Account from "./schema";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const accountInfo = express.Router();
 
-/* accountInfo.get("/", async (req, res) => {
+accountInfo.get("/", async (req, res) => {
   const conn = await mongoose.connect(process.env.accountForm as string);
   //sort by fastest time
-  const highscoreData = await Account.find().sort({ time: 1 });
+  const AccountData = await Account.find();
   conn.disconnect();
 
   res.status(200).json({
-    highscoreList: highscoreData,
+    account: AccountData,
   });
-}); */
+});
 
 accountInfo.post("/", async (req, res) => {
   const conn = await mongoose.connect(process.env.accountForm as string);

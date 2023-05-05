@@ -2,11 +2,12 @@
   "name": "formlogin",
   "version": "1.0.0",
   "description": "Form Login",
-  "main": "index.js",
+  "main": "App.ts",
   "scripts": {
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node --esm App.ts"
+    "start": "ts-node --esm App.ts",
+    "dev": "npx nodemon ./App.ts"
   },
   "repository": {
     "type": "git",
